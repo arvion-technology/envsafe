@@ -12,11 +12,11 @@
     "url": "git+https://github.com/arvion-technology/envsafe.git"
   },
   "scripts": {
-    "test": "node --test test/",
+    "test": "node --test",
     "demo": "node scripts/serve.mjs . 4173",
     "shot": "node scripts/shot.mjs 1440 900 docs/screenshot.png",
     "shot:2": "node scripts/shot.mjs 1440 900 docs/screenshot-2.png #typescript",
-    "verify": "node --test test/ && node scripts/serve-check.mjs"
+    "verify": "node --test && node scripts/serve-check.mjs"
   },
   "engines": {
     "node": ">=20"
