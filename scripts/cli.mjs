@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-// EnvSafe CLI — check an environment, print its type, or build a .env.example.
+// EnvSafe CLI, check an environment, print its type, or build a .env.example.
 import { readFileSync, writeFileSync } from "node:fs";
 import { parseDotenv } from "../src/dotenv.js";
 import { validateEnv, validateSchemaDefinition, formatReport } from "../src/validate.js";
 import { toTypeScript, toEnvExample } from "../src/typings.js";
 
-const USAGE = `envsafe — fail fast on bad environment variables
+const USAGE = `envsafe, fail fast on bad environment variables
 
 Usage
   envsafe check  [--schema env.schema.json] [--env .env] [--strict] [--json]

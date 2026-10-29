@@ -2,7 +2,7 @@
 <img src="docs/demo.gif" alt="EnvSafe demo: environment schema and .env editor on the left, validation preview on the right" width="100%" />
 </div>
 
-<sub>Recorded from the live demo — <a href="docs/demo.mp4">MP4</a> · <a href="docs/screenshot.png">static frame</a></sub>
+<sub>Recorded from the live demo, <a href="docs/demo.mp4">MP4</a> · <a href="docs/screenshot.png">static frame</a></sub>
 
 # EnvSafe
 
@@ -22,20 +22,20 @@ explicit, and validating once at boot means every later read is already typed.
 
 ## What it does
 
-- **Schema DSL** — `string`, `number`, `boolean`, `enum`, `url`, `duration`,
+- **Schema DSL**: `string`, `number`, `boolean`, `enum`, `url`, `duration`,
   `json` and `port`, with `required`, `default`, bounds, patterns and
   `protocols`.
-- **Coercion** — `"8080"` becomes `8080`, `"yes"` becomes `true`, `"2m"`
+- **Coercion**: `"8080"` becomes `8080`, `"yes"` becomes `true`, `"2m"`
   becomes `120000`, `'{"a":1}'` becomes `{ a: 1 }`.
-- **Aggregated errors** — every bad variable is reported with the key, the
+- **Aggregated errors**: every bad variable is reported with the key, the
   reason and a fix hint; the process does not stop at the first one.
-- **Secret redaction** — a `secret: true` field is masked in previews, errors
+- **Secret redaction**: a `secret: true` field is masked in previews, errors
   and the CLI JSON report. The typed value is still available to the app.
-- **.env parser** — comments, `export`, single/double quotes, escapes, inline
+- **.env parser**: comments, `export`, single/double quotes, escapes, inline
   comments, duplicate keys (last wins) and line-numbered parse errors.
-- **CLI** — `envsafe check`, `envsafe type` and `envsafe example`, with exit
+- **CLI**: `envsafe check`, `envsafe type` and `envsafe example`, with exit
   codes suitable for Docker entrypoints and CI.
-- **TypeScript generation** — `toTypeScript(schema)` emits an `Env` interface
+- **TypeScript generation**: `toTypeScript(schema)` emits an `Env` interface
   whose optional markers and enum unions match the runtime values.
 
 ## Screenshots
@@ -146,7 +146,7 @@ node scripts/serve-check.mjs   # demo asset references and placeholder check
 
 ## Limitations
 
-There is no runtime accessor that enforces the TypeScript type — the generated
+There is no runtime accessor that enforces the TypeScript type, the generated
 interface is a compile-time aid, not a validator; the validation happens in
 `defineEnv`. Values already in `process.env` are strings and are never written
 back. The schema language is deliberately small: no nested objects, no

@@ -168,7 +168,7 @@ async function copyType() {
     toast("Copied the generated interface", "success");
   } catch {
     A.download("env.d.ts", code, "text/typescript");
-    toast("Clipboard blocked — downloaded env.d.ts", "info");
+    toast("Clipboard blocked, downloaded env.d.ts", "info");
   }
 }
 

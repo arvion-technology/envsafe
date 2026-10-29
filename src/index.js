@@ -25,7 +25,7 @@ export function defineEnv(schema, { env = globalThis.process?.env || {}, warnUnk
   return result.values;
 }
 
-/** Validate without throwing — used by the CLI and the demo. */
+/** Validate without throwing, used by the CLI and the demo. */
 export function checkEnv(schema, env, options) {
   const result = validateEnv(schema, env, options);
   return { ...result, report: formatReport(result) };

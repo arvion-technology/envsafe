@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark" />
-  <title>EnvSafe — fail fast on bad environment variables</title>
+  <title>EnvSafe | fail fast on bad environment variables</title>
   <meta name="description" content="Live environment validation: edit a schema and a .env file, then see coerced values, aggregated errors with fix hints, redacted secrets and the generated TypeScript interface." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 9 L91 91 H73 L50 52 L27 91 H9 Z' fill='%23f5c26b'/><circle cx='50' cy='31' r='6.6' fill='%230b0f1a'/><path d='M50 52 L67 90 H33 Z' fill='%230b0f1a'/></svg>" />
   <link rel="stylesheet" href="arvion.css" />
@@ -24,7 +24,7 @@
         </span>
       </a>
       <span class="spacer"></span>
-      <span class="badge" id="status-badge">—</span>
+      <span class="badge" id="status-badge">, </span>
       <span class="badge green"><span class="dot"></span> no dependencies</span>
       <a class="btn sm" href="https://github.com/arvion-technology/envsafe" target="_blank" rel="noopener">GitHub ↗</a>
     </header>
@@ -38,8 +38,8 @@
         </div>
         <span class="spacer"></span>
         <div class="row">
-          <span class="badge mono" id="vars-badge">—</span>
-          <span class="badge gold" id="time-badge">—</span>
+          <span class="badge mono" id="vars-badge">, </span>
+          <span class="badge gold" id="time-badge">, </span>
         </div>
       </div>
 
@@ -62,16 +62,16 @@
             <div class="card-head">
               <div>
                 <div class="card-title">Environment</div>
-                <div class="card-sub">A .env file — comments, quotes and exports are parsed</div>
+                <div class="card-sub">A .env file, comments, quotes and exports are parsed</div>
               </div>
               <span class="spacer"></span>
               <div class="chips" id="env-chips"></div>
             </div>
             <textarea class="textarea env-editor" id="env-editor" spellcheck="false" aria-label=".env contents"></textarea>
             <div class="row mt-1">
-              <span class="small muted" id="env-source">—</span>
+              <span class="small muted" id="env-source">, </span>
               <span class="spacer"></span>
-              <span class="small muted mono" id="env-lines">—</span>
+              <span class="small muted mono" id="env-lines">, </span>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@
           <div class="card-head">
             <div>
               <div class="card-title">Validation preview</div>
-              <div class="card-sub" id="result-sub">—</div>
+              <div class="card-sub" id="result-sub">, </div>
             </div>
             <span class="spacer"></span>
             <div class="tabs" id="view-tabs">
@@ -91,10 +91,10 @@
 
           <section data-view-panel="validation">
             <div class="verdict" id="verdict">
-              <div class="verdict-mark" id="verdict-mark">—</div>
+              <div class="verdict-mark" id="verdict-mark">, </div>
               <div>
-                <div class="verdict-title" id="verdict-title">—</div>
-                <div class="small muted" id="verdict-sub">—</div>
+                <div class="verdict-title" id="verdict-title">, </div>
+                <div class="small muted" id="verdict-sub">, </div>
               </div>
               <span class="spacer"></span>
               <div class="row" id="verdict-stats"></div>
